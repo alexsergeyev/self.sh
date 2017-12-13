@@ -9,5 +9,4 @@ FNAME=$(curl -F "UPLOADCARE_PUB_KEY=$UPLOADCARE_PUBLIC" \
      -F "UPLOADCARE_STORE=1" \
      -F "file=@$CURFILE.gif" \
      "https://upload.uploadcare.com/base/" | awk -F ':' '{print $2}' | tr -d '\"}')
-URL="https://ucarecdn.com/$FNAME/$CURFILE.gif"
-open -a Safari $URL
+echo "https://ucarecdn.com/$FNAME/$CURFILE.gif"
